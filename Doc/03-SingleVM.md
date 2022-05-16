@@ -1,7 +1,7 @@
-# Deploy VM
+# Deploy a VM
 
 There are few steps necessary to perform o deploy a VM in Azure. Or rather - it is necessary to deploy few additional resources to be able to deploy VM. \
-On top of that according to \
+On top of that according to 
 > https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine
 azurerm_virtual_machine resource definition is superseded by azurerm_linux_virtual_machine and azurerm_windows_virtual_machine resources. 
 
@@ -11,25 +11,24 @@ I will deploy first the Linuks system and use ###azurerm_linux_virtual_machine##
 # What is necessary o deploy VM
 
 Above what I have created since last module (resource group, virtual network and subnet) an 
-network interface, 
-OS disk information (and OS type either either by source_image_id or source_image_reference definition), 
-VM size information are required \
+network interface, OS disk information (and OS type either either by source_image_id or source_image_reference definition), 
+VM size information are required. \
 It is possible to configure access base on username and password, but this also means that both of them will end up in public repository. It is much more secure, is advised by HashiCorp (and looks more pro :wink:) to use SSH key instead. 
 
 ## VM size
 
 The easiest information to acquire is the VM size - or rather "code name" for the size. \
-It requires a bit of patience, but can be found on \
+It requires a bit of patience, but can be found on 
 > https://docs.microsoft.com/en-us/azure/virtual-machines/sizes
 
 
 ## Network interface
 
-Network interface documentation can be found there \
+Network interface documentation can be found there 
 > https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface
 
 Each VM in azure requires a NIC. \
-I will include the NIC definition in the network.tf file \
+I will include the NIC definition in the network.tf file 
 ``` hcl
 # Newrok interface
 resource "azurerm_network_interface" "NIC" {
