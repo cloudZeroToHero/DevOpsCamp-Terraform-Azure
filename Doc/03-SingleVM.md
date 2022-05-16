@@ -81,5 +81,5 @@ VM have proper OS (but no public IP address)
 ![Linuks VM](./images/03-LVM.jpg)
 
 
-All source files can be found there \
+All source files can be found there :
 > https://github.com/cloudZeroToHero/DevOpsCamp-Terraform-Azure/tree/main/Code/03-SingleVM
