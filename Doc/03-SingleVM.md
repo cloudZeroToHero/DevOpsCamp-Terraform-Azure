@@ -5,7 +5,7 @@ On top of that according to
 > https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine
 azurerm_virtual_machine resource definition is superseded by azurerm_linux_virtual_machine and azurerm_windows_virtual_machine resources. 
 
-I will deploy first the Linuks system and use ###azurerm_linux_virtual_machine###
+I will deploy first the Linuks system and use ***azurerm_linux_virtual_machine***
 > https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine#size
 
 # What is necessary o deploy VM
