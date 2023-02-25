@@ -54,10 +54,9 @@ resource "azurerm_network_security_group" "SecGr" {
 ```
 
 As a result I have shorter, more manageable code and Network Security Group with required rules
-![NSG](./images/08-nsg.jpg)
 
 Result rule looks on Azure Portal as it should:
-![nsg-rule](./images/08-nsg.jpg)
+![NSG](./images/08-nsg.jpg)
 
 
 Complete code is available here:
