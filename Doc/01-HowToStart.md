@@ -82,11 +82,12 @@ But from the screen we can find that by default user password has a 1 yer expira
 
 
 Once new user is created we can add environmnetal varialbes (all four of them) to be used during authentication
+```
 $Env:ARM_CLIENT_ID = "<APPID_VALUE>"
 $Env:ARM_CLIENT_SECRET = "<PASSWORD_VALUE>"
 $Env:ARM_SUBSCRIPTION_ID = "<SUBSCRIPTION_ID>"
 $Env:ARM_TENANT_ID = "<TENANT_VALUE>"
-
+```
 
 The only question is - how to manage these variables.
 
