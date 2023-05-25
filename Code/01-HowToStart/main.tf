@@ -1,6 +1,9 @@
 terraform {
   required_version = ">=1.1.8"
 
+  # HashiCorp "strongly recommends" including requires_providers block into production code
+  # to block provider version and avoid problems when newest version could be incompatibile
+  # with old one.
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm" #this is shorthand for registry.terraform.io/hashicorp/azurerm
@@ -11,13 +14,14 @@ terraform {
 
 provider "azurerm" {
   features {}
+  # It is possible to pin/select subscripiotn here by providing its ID
+  # subscription_id = "00000000-0000-0000-0000-000000000000"
+  # tenant_id = "00000000-0000-0000-0000-000000000000"
 }
-
-
 
 resource "azurerm_resource_group" "DevOpsCamp-RG" {
   name     = "DevOpsCamp-RG"
-  location = "westeurope"
+  location = "westus"
   tags = {
     environment = "test"
   }
