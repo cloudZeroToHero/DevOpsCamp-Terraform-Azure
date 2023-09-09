@@ -242,7 +242,7 @@ Get-ChildItem env: | where name -like "ARM*" | Remove-Item
 
 # Commands
 
-All the commands are available here
+All the Powershell commands are available here
 > https://github.com/cloudZeroToHero/DevOpsCamp-Terraform-Azure/blob/main/Code/00-Prerequisites-and-login/Login-to-AZ.ps1
 
 # Sources
