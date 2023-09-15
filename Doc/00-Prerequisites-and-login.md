@@ -119,6 +119,14 @@ $context = Get-AzSubscription -SubscriptionName "<name-of-your-subscription>"
 Set-AzContext $context
 ```
 
+If you have more than one subscription it can be helpful to set the one to which you want to be connected every time you logon. Thus you will not be forced to set-azcontext every time you logon, and for example avoid situation when you mess with prod subscirption (when you just want to test something on youd dev one)
+
+Just type once 
+``` Powershell 
+Update-AzConfig -DefaultSubscriptionForLogin "subscription-name"
+```
+
+
 ### Hardcode susbscription
 
 Other possibility is to include subscription ID in azure_rm provider block:

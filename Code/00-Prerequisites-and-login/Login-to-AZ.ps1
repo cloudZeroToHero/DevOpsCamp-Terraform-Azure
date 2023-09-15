@@ -15,6 +15,8 @@ Set-AzContext $context
 # just to check of command was successful
 Get-AzContext    
 
+# Set the default subscription to logon
+Update-AzConfig -DefaultSubscriptionForLogin "subscription-name"
 
 # Commands to create service principal (once logged in to Azure with e.g. owner acoount)
 $subscriptionID = (Get-AzSubscription -subscriptionName "cloudzerotohero").Id
